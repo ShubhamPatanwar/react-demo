@@ -1,17 +1,25 @@
 import { Component } from "react";
-
+import { Redirect} from 'react-router-dom';
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             userName:'',
-            password:''
+            password:'',
+            redirect: false
          };
     }
 
     loginSubmit = (event) => {
         event.preventDefault();
         console.log( this.state );
+        if(this.state.userName === 'admin' && this.state.password === 'admin'){
+            this.setState({
+                redirect: true
+            })
+        }else{
+alert('Invalid username and password.');
+        }
     }
 
     changeHandler = (event) => {
@@ -24,6 +32,11 @@ class Login extends Component {
     }
   
     render() {
+        if(this.state.redirect){
+            return(
+                <Redirect to='/dashboard' />
+            )
+        }
     const {userName, password} = this.state;
         return (
             <div className="container" style={{marginTop:'50px'}}>
