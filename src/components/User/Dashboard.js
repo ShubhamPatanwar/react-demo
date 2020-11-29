@@ -68,7 +68,7 @@ this.getCovidResult();
                     </div>
                     </div>
                 </div>
-<Footer></Footer>
+{/* <Footer></Footer> */}
 </div>        
 );
 }

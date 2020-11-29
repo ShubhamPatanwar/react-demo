@@ -1,28 +1,23 @@
 import { Component } from "react";
 
 class Days extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          
-          };
-          
-          console.log('days',props);
-    }
+   
     render() {
      var  covidResultData = this.props.covidResultData;
         return (
-            <table className="table">
+          <div className="card" style={{marginTop:'50px'}}>
+              <div className="card-body" style={{overflow:'auto', height:'500px'}}>
+              <table className="table">
             <thead>
               <tr>
-              <th>dailyconfirmed</th>
-               <th>dailydeceased</th>
-               <th>dailyrecovered</th>
-               <th>date</th>
-               <th>dateymd</th>
-               <th>totalconfirmed</th>
-               <th>totaldeceased</th>
-               <th>totalrecovered</th>
+              <th>Daily Confirmed</th>
+               <th>Daily Deceased</th>
+               <th>Daily Recovered</th>
+               <th>Date</th>
+               <th>Dateymd</th>
+               <th>Total Confirmed</th>
+               <th>Total Deceased</th>
+               <th>Total Recovered</th>
               </tr>
            
             </thead>
@@ -45,7 +40,9 @@ class Days extends Component {
      
         </table>
        
-        );
+              </div>
+          </div>
+       );
     }
 }
 
