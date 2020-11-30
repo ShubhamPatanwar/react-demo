@@ -25,18 +25,18 @@ class SideMenu extends Component {
             
           // </ul>
           
-          <ul class="list-group" style={{marginTop:'50px'}}>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <ul className="list-group" style={{marginTop:'50px'}}>
+          <li className="list-group-item d-flex justify-content-between align-items-center">
           <a onClick={ (e)=> this.handleClick(e, 'tested') } href="#tested" className="nav-link" >Tested</a>
-            {/* <span class="badge badge-primary badge-pill">14</span> */}
+            {/* <span className="badge badge-primary badge-pill">14</span> */}
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <li className="list-group-item d-flex justify-content-between align-items-center">
           <a onClick={ (e)=> this.handleClick(e, 'day') } href="#day" className="nav-link" >Day wise</a>
-            {/* <span class="badge badge-primary badge-pill">2</span> */}
+            {/* <span className="badge badge-primary badge-pill">2</span> */}
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <li className="list-group-item d-flex justify-content-between align-items-center">
           <a onClick={ (e)=> this.handleClick(e, 'state') } href="#state" className="nav-link active">State wise</a>
-            {/* <span class="badge badge-primary badge-pill">1</span> */}
+            {/* <span className="badge badge-primary badge-pill">1</span> */}
           </li>
         </ul>
         );
